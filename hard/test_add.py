@@ -1,8 +1,9 @@
 from add import *
 
 def test_bitreverse():
-    assert bitreverse(0) == 0
-    assert bitreverse(0b1001101) == 0b1011001
+    assert bitreverse(0, 1) == 0
+    assert bitreverse(0b1001101, 7) == 0b1011001
+    assert bitreverse(0b1001101, 8) == 0b10110010
 
 def test_get_bit():
     assert get_bit(0) == (0,0)
@@ -23,5 +24,6 @@ def test_add():
     assert add(0, 0) == 0
     assert add(17, 0) == 17
     assert add(0, 23) == 23
-    #assert add(100, 100) == 200
-    #assert add(123203, 2121) == 125324
+    assert add(3, 3) == 6
+    assert add(123203, 2121) == 125324
+
